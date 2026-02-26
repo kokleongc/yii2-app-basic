@@ -50,7 +50,13 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'country/<code:[a-zA-Z]{2}>' => 'country/get-country',
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/country'],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api/v1/country',
+                    'tokens' => [
+                        '{id}' => '<id:[a-zA-Z]{2}>',
+                    ],
+                ],
             ],
         ],
     ],
