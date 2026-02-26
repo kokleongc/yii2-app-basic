@@ -46,6 +46,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'country/<code:[a-zA-Z]{2}>' => 'country/get-country'
             ],
         ],
     ],

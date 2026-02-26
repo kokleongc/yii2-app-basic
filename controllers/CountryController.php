@@ -15,4 +15,11 @@ class CountryController extends Controller
         return $this->asJson($countries);
     }
 
+    public function actionGetCountry(string $code)
+    {
+        $country = Country::findOne(['code' => $code]);
+
+        return $this->asJson($country);
+    }
+
 }
